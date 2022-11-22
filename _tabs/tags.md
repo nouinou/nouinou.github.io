@@ -1,5 +1,6 @@
 ---
 layout: tags
 icon: fas fa-tag
-order: 2
+order: 92
+exclude: true
 ---

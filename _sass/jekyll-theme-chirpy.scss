@@ -1,0 +1,101 @@
+@import 'colors/light-typography', 'colors/dark-typography', 'addon/module',
+	'addon/variables', 'variables-hook', 'addon/syntax', 'addon/commons',
+	'layout/home', 'layout/post', 'layout/tags', 'layout/archives',
+	'layout/categories', 'layout/category-tag';
+
+$accent-color: #ffa107;
+
+@mixin custom-light {
+	a {
+		color: black;
+		:hover {
+			color: $accent-color;
+		}
+	}
+}
+
+@mixin custom-dark {
+	a {
+		color: var(--heading-color);
+		:hover {
+			color: $accent-color;
+		}
+	}
+}
+
+html {
+	@media (prefers-color-scheme: light) {
+		&:not([data-mode]),
+		&[data-mode='light'] {
+			@include custom-light;
+		}
+
+		&[data-mode='dark'] {
+			@include custom-dark;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+		&:not([data-mode]),
+		&[data-mode='dark'] {
+			@include custom-dark;
+		}
+
+		&[data-mode='light'] {
+			@include custom-light;
+		}
+	}
+}
+
+.text {
+	&.--accent {
+		color: $accent-color;
+	}
+}
+
+.site-title {
+	a {
+		color: var(--heading-color) !important;
+
+		&:hover {
+			color: red !important
+		}
+	}
+	
+}
+
+.page-content {
+	margin-top: 0.7rem;
+
+	h2,
+	h3,
+	h4 {
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	}
+
+	h2 {
+		color: $accent-color;
+	}
+
+	a {
+		&.img-link {
+			@extend %no-cursor;
+		}
+
+		/* created by `_includes/img-extra.html` */
+		&.popup {
+			cursor: zoom-in;
+
+			> img[data-src]:not(.normal):not(.left):not(.right) {
+				@include align-center;
+			}
+		}
+
+		&:hover {
+			code {
+				@extend %link-hover;
+			}
+		}
+	} /* a */
+}

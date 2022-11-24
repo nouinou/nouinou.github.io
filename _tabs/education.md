@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: nav-page
 icon: fas fa-graduation-cap
 order: 2
 ---

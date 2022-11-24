@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: nav-page
 icon: fa fa-briefcase
 order: 1
 ---

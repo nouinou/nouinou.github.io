@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: nav-page
 icon: fas fa-tools
 order: 3
 ---

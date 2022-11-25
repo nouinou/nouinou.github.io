@@ -12,6 +12,10 @@ $accent-color: #ffa107;
 			color: $accent-color;
 		}
 	}
+	div:not(.post-preview) > .post-content > p {
+		font-size: 1.1rem;
+	}
+	
 }
 
 @mixin custom-dark {
@@ -21,6 +25,11 @@ $accent-color: #ffa107;
 			color: $accent-color;
 		}
 	}
+	div:not(.post-preview) > .post-content > p {
+		font-size: 1.1rem;
+		color: white;
+	}
+	
 }
 
 html {
@@ -58,10 +67,9 @@ html {
 		color: var(--heading-color) !important;
 
 		&:hover {
-			color: red !important
+			color: red !important;
 		}
 	}
-	
 }
 
 .page-content {
